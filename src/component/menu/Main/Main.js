@@ -23,27 +23,40 @@ import {
 
 export class Main extends React.Component {
     render(){
+        let pageWithoutBar = [ Home ];
+        let isLeftBarShow = true;
+        let contentSize = 11;
+
+        for(var i = 0; i<= pageWithoutBar.length - 1; i++)
+        {
+            if (pageWithoutBar[i].name.toLowerCase() === window.location.pathname.slice(1).toLowerCase()){
+                isLeftBarShow = false;
+                contentSize = 12;
+                break;
+            }
+        }
+
         return(
             <div>
                 <Topbar />
-                <div>
-                    <Grid fluid>
-                        <Row>
-                            <Col md={1}>
-                                <LeftBar />
-                            </Col>
-                            <Col md={11} className="content">
-                                <Switch>
-                                    <Route path='/Home' component={Home} />
-                                    <Route path='/Finance' component={Finance} />
-                                    <Route path='/Admin' component={Admin} />
-                                    <Route path='/Resource' component={Resource} />
-                                    <Route path='/Report' component={Report} />
-                                </Switch>
-                            </Col>
-                        </Row> 
-                    </Grid> 
-                </div>
+                <Grid fluid>
+                    <Row>
+                        {isLeftBarShow &&
+                        <Col xs={1} md={1}>
+                            <Route path="/" component={LeftBar} />
+                        </Col>
+                        }
+                        <Col xs={contentSize} md={contentSize} id="page-wrap">
+                            <Switch>
+                                <Route path='/Home' component={Home} />
+                                <Route path='/Finance' component={Finance} />
+                                <Route path='/Admin' component={Admin} />
+                                <Route path='/Resource' component={Resource} />
+                                <Route path='/Report' component={Report} />
+                            </Switch>
+                        </Col>
+                    </Row> 
+                </Grid> 
                 <Bottombar />
             </div>
         );

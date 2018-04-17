@@ -1,0 +1,111 @@
+/* .rwt__tabs[data-rwt-vertical=true] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 600px;
+}
+
+.rwt__tablist:not([aria-orientation=vertical]) {
+  border-bottom: 1px solid #ddd
+}
+
+.rwt__tablist[aria-orientation=vertical] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  border-right: 1px solid #ddd;
+  margin-right: 1rem
+}
+
+.rwt__tab {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem 2rem;
+  -webkit-transition: background .3s cubic-bezier(.22, .61, .36, 1);
+  transition: background .3s cubic-bezier(.22, .61, .36, 1);
+  min-height: 60px;
+  margin-bottom: 2px;
+}
+
+.rwt__tab:focus,
+.rwt__tab[aria-selected=false]:hover,
+.rwt__tablist .active {
+  outline: 0;
+  opacity: 0.9;
+  background: rgba(0, 0, 0, .05);
+}
+
+.rwt__tab[aria-selected=true] {
+  position: relative
+}
+
+.rwt__tab[aria-selected=true]:after {
+  content: "";
+  position: absolute
+}
+
+.rwt__tablist:not([aria-orientation=vertical]) .rwt__tab[aria-selected=true]:after {
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid #00d8ff;
+}
+
+.rwt__tablist[aria-orientation=vertical] .rwt__tab[aria-selected=true]:after {
+  right: -1px;
+  top: 0;
+  height: 100%;
+} */
+
+.tab-col {
+  box-shadow: 0 10px 30px 1px;
+}
+
+.tab-col a {
+  color: #000;
+  min-height: 60px;
+}
+
+.tab-red {
+  background: #e74c3c;
+}
+
+.tab-green {
+  background: #2ecc71;
+}
+
+.tab-purple {
+  background:#9b59b6;
+}
+
+.tab-blue {
+  background: #3498db;
+}
+
+.tab-orange {
+  background: #e67e22;
+}
+
+.tab-yellow {
+  background: #f1c40f;
+}
+
+.nav-white ul li a:active {
+  color: #eee;
+}

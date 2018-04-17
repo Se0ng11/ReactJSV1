@@ -1,10 +1,14 @@
 import React from 'react';
 
 export class Login extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    
     render(){
         return(
             <div>
-                <h4>Login Page</h4>
+                <h4>{this.props.location.pathname.slice(1)} Page</h4>
                 <hr />
             </div>
         )

@@ -1,15 +1,15 @@
 import React from 'react';
-import { Navbar,Nav, NavItem } from 'react-bootstrap';
+// import { Navbar,Nav, NavItem } from 'react-bootstrap';
 
 export class Bottombar extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            bottomBar: {
-                "float": "left"
-            }
-        }
-    }
+    // constructor(){
+    //     super();
+    //     this.state = {
+    //         bottomBar: {
+    //             "float": "left"
+    //         }
+    //     }
+    // }
     render(){
         return (
             <div>
